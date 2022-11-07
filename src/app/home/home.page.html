@@ -12,7 +12,7 @@
       <ion-thumbnail>
         <ion-img class="rounded-photo" src="{{item.photo}}"></ion-img>
       </ion-thumbnail>
-      <ion-label> {{item.name}} ${{item.price}}</ion-label>
+      <ion-label> {{item.name}} {{item.price|currency}}</ion-label>
       <ion-button slot="end" (click)="addProductToCart(item);$event.stopPropagation()">
         <!-- (click)="addProductToCart(item.id)"> -->
         <ion-icon name="cart"></ion-icon>

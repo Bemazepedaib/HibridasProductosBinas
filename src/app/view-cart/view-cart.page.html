@@ -14,7 +14,7 @@
         <ion-thumbnail>
           <ion-img class="rounded-photo" src="{{item.photo}}"></ion-img>
         </ion-thumbnail>
-        <ion-label> {{item.name}} ({{item.quantity}})  ${{item.price*item.quantity}}</ion-label>
+        <ion-label> {{item.name}} ({{item.quantity}})  {{(item.price*item.quantity)|currency}}</ion-label>
       </ion-item>
       <ion-item-options side="end" (ionSwipe)="deleteCartProduct(i)">
         <ion-item-option expandable color="danger">
@@ -25,7 +25,7 @@
   </ion-list>
   <ion-card>
     <ion-label>
-      El total es: ${{cart.total}}
+      El total es: {{cart.total|currency}}
     </ion-label>
   </ion-card>
 </ion-content>
